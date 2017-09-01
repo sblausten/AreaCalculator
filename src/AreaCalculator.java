@@ -2,7 +2,7 @@
 public class AreaCalculator {
 
 	
-	public static int area(Square square) {
-		return square.getLength() * square.getWidth();
+	public static Double area(Shape shape) {
+		return shape.getLength() * shape.getWidth();
 	}
 }

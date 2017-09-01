@@ -1,12 +1,12 @@
 
-public class Square implements Shape{
-	
+public class Rectangle implements Shape{
+
 	private Double length;
 	private Double width;
 
-	public Square(Double side) {
-		this.length = side;
-		this.width = side;
+	public Rectangle(Double length, Double width) {
+		this.length = length;
+		this.width = width;
 	}
 
 	public Double getLength() {
