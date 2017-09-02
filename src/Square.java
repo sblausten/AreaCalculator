@@ -1,28 +1,24 @@
+import java.math.BigDecimal;
 
 public class Square implements Shape{
 	
-	private Double length;
-	private Double width;
+	private BigDecimal side;
 
-	public Square(Double side) {
-		this.length = side;
-		this.width = side;
+	public Square(BigDecimal side) {
+		this.side = side;
 	}
 
-	public Double getLength() {
-		return length;
+	@Override
+	public BigDecimal calculateArea() {
+		return getSide().multiply(getSide());
+	}
+	
+	public void setSide(BigDecimal side) {
+		this.side = side;
 	}
 
-	public void setLength(Double length) {
-		this.length = length;
-	}
-
-	public Double getWidth() {
-		return width;
-	}
-
-	public void setWidth(Double width) {
-		this.width = width;
+	private BigDecimal getSide() {
+		return this.side;
 	}
 
 }

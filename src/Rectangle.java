@@ -1,28 +1,35 @@
+import java.math.BigDecimal;
 
 public class Rectangle implements Shape{
 
-	private Double length;
-	private Double width;
+	private BigDecimal length;
+	private BigDecimal width;
 
-	public Rectangle(Double length, Double width) {
+	public Rectangle(BigDecimal length, BigDecimal width) {
 		this.length = length;
 		this.width = width;
 	}
+	
+	public BigDecimal calculateArea() {
+		return getLength().multiply(getWidth());
+	}
+	
+	public void setWidth(BigDecimal width) {
+		this.width = width;
+	}
+	
+	public void setLength(BigDecimal length) {
+		this.length = length;
+	}
 
-	public Double getLength() {
+	private BigDecimal getLength() {
 		return length;
 	}
 
-	public void setLength(Double length) {
-		this.length = length;
-	}
-
-	public Double getWidth() {
+	private BigDecimal getWidth() {
 		return width;
 	}
 
-	public void setWidth(Double width) {
-		this.width = width;
-	}
+
 
 }

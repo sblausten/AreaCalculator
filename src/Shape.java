@@ -1,8 +1,8 @@
+import java.math.BigDecimal;
 
 public interface Shape {
 
-	Double getLength();
-	Double getWidth();
+	BigDecimal calculateArea();
 	
 
 }
